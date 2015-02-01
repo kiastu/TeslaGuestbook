@@ -1645,7 +1645,7 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[
   function prettyPrintOne(sourceCodeHtml, opt_langExtension, opt_numberLines) {
     // PATCHED: http://code.google.com/p/google-code-prettify/issues/detail?id=213
     var container = document.createElement('div');
-    // This could cause images to load and onload listeners to fire.
+    // This could cause signatures to load and onload listeners to fire.
     // E.g. <img onerror="alert(1337)" src="nosuchimage.png">.
     // We assume that the inner HTML is from a trusted source.
     container.innerHTML = '<pre>' + sourceCodeHtml + '</pre>';

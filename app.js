@@ -47,7 +47,7 @@ if (env === 'production') {
 /*Configure the multer.*/
 
 app.use(multer({
-    dest: './images/',
+    dest: './signatures/',
     rename: function (fieldname, filename) {
         return filename + Date.now();
     },

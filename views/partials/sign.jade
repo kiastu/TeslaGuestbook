@@ -1,0 +1,14 @@
+h1 Signature Panel:
+.container
+    div
+        canvas(id="signaturePanel",width="500",height="200")
+        img(id = 'savedImage')
+        button(ng-click ="clearCanvas()") Clear
+    div
+        label Enter your name
+        input(type = "text",id = "inputName")
+    div
+        label Leave a message!
+        input(type = "text", id = "inputContent")
+    div
+        button(ng-click = "submitPost()") Submit

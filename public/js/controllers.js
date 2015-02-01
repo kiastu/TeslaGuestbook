@@ -115,4 +115,7 @@ angular.module('myApp.controllers', []).
             clickDrag.length = 0;
             context.clearRect(0, 0, 500, 200);
         }
+    }).
+    controller('TwitterController',function($scope, $http){
+
     });

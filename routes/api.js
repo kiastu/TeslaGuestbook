@@ -10,7 +10,7 @@ exports.post = function (req, res) {
   var base64Data = req.body.imgBase64.replace(/^data:image\/png;base64,/, "");
   var date = new Date();
   var imageName = date.valueOf()+req.body.name;
-  fs.writeFile("signatures/"+imageName+".png", base64Data, 'base64', function(err) {
+  fs.writeFile("public/signatures/"+imageName+".png", base64Data, 'base64', function(err) {
     console.log(err);
   });
   //parse the req, and save the model.

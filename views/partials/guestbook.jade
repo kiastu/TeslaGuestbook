@@ -1,27 +1,15 @@
-p The Guestbook list goes here.
-script(src= "maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js")
-link(href='css/bootstrap.min.css', rel='stylesheet')
-p We should have a list of past people populated here, both retrieved from twitter and from the database.
-#bookList(ng-repeat = "post in posts")
-	
-	.post
-		img(height='220px', src="https://s3.amazonaws.com/patreon/9acf38ff7536ff9c3fe4a6e4f1cf298b.jpg")
-		p {{post.name}}
-		p {{post.date}}
 
-input(type = "text") Name
-input(type = "text") Message
-button(ng-click="saveMessage()") Sign Guestbook
+.container
+	script(src= "maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js")
+	h1 Guestbook
+	link(href='css/bootstrap.min.css', rel='stylesheet')
+	#bookList(ng-repeat = "post in posts",class = "well")
 
-.container(width='500px')
-	.row
-		div(class="col-sm-6,col-lg-3")
-			img(src='images/Twitter_app.png', class="img-responsive")
-		div(class="col-sm-6, col-lg-3")
-			This is part of our grid.
-		div(class="col-sm-6, col-lg-3")
-			This is part of our grid.   
-		div(class="col-sm-6, col-lg-3")
-			This is part of our grid.
-
-
+		.post.row
+			.col-lg-4
+				p.vcenter.bold {{post.name}}
+			.col-lg-5
+				p {{post.date}}
+				p {{post.content}}
+			.col-lg-3
+				img(height = '100px', src = "/signatures/{{post.signatureLink}}.png")

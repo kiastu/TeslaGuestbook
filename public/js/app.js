@@ -26,6 +26,10 @@ config(function ($routeProvider, $locationProvider) {
         templateUrl: 'partials/sign',
         controller: 'SignController'
       }).
+    when('/twitter',{
+        templateUrl: 'partials/twitter',
+        controller: 'TwitterController'
+      }).
     otherwise({
       redirectTo: '/greet'
     });

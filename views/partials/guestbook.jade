@@ -1,9 +1,10 @@
 p The Guestbook list goes here.
 p We should have a list of past people populated here, both retrieved from twitter and from the database.
 #bookList(ng-repeat = "post in posts")
-    //img
-    p {{post.name}}
-    p {{post.date}}
+    .post
+        img(src="https://s3.amazonaws.com/patreon/9acf38ff7536ff9c3fe4a6e4f1cf298b.jpg")
+        p {{post.name}}
+        p {{post.date}}
 
 input(type = "text") Name
 input(type = "text") Message

@@ -6,3 +6,17 @@ body {
 a {
   color: #00B7FF;
 }
+
+.centerimage {
+	margin: auto;
+
+}
+
+#image {
+	display:block;
+	margin:auto;
+}
+
+p.inline {
+	display: inline;
+}

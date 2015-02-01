@@ -1,14 +1,30 @@
-h1 Signature Panel:
-.container
-    div
-        canvas(id="signaturePanel",width="500",height="200")
-        img(id = 'savedImage')
-        button(ng-click ="clearCanvas()") Clear
-    div
-        label Enter your name
-        input(type = "text",id = "inputName")
-    div
-        label Leave a message!
-        input(type = "text", id = "inputContent")
-    div
-        button(ng-click = "submitPost()") Submit
+
+
+script(src= "maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js")
+link(href='css/bootstrap.min.css', rel='stylesheet')
+
+.col-sm-3
+	p
+
+
+.col-sm-4
+	h1 Signature Panel:
+	.container
+		div
+			canvas(id="signaturePanel",width="500",height="200")
+			img(id = 'savedImage')
+			button(ng-click ="clearCanvas()") Clear
+		div
+			label Enter your name
+			input(type = "text",id = "inputName")
+		div
+			label Leave a message!
+			input(type = "text", id = "inputContent")
+		div
+			button(ng-click = "submitPost()") Submit
+
+.col-sm-5
+	p
+
+
+

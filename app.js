@@ -12,7 +12,8 @@ var express = require('express'),
   api = require('./routes/api'),
   http = require('http'),
   path = require('path');
-  compression = require('compression');
+  compression = require('compression'),
+  mongoose = require('mongoose');
 
 var app = module.exports = express();
 
@@ -42,8 +43,14 @@ if (env === 'development') {
 if (env === 'production') {
   // TODO
 }
-
-
+/*
+/=============Database Configuration==============/
+ */
+var config = require('./config/db.js');
+var credentials = config.dbCredentials;
+var auth = "mongodb://"+credentials.username+":"+credentials.password+"@ds039411.mongolab.com:39411/teslaguestbook";
+console.log(auth);
+mongoose.connect(auth);
 /**
  * Routes
  */
@@ -53,7 +60,8 @@ app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
 
 // JSON API
-app.get('/api/name', api.name);
+app.post('/api/posts',api.post);
+app.get('/api/posts',api.getPosts);
 
 // redirect all others to the index (HTML5 history)
 app.get('*', routes.index);

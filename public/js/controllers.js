@@ -21,8 +21,12 @@ angular.module('myApp.controllers', []).
         // write Ctrl here
 
     }).
-    controller('GuestbookController', function ($scope) {
+    controller('GuestbookController', function ($scope,$http) {
         // write Ctrl here
+        //retrieve the button click
+        $scope.saveMessage = function(){
+            alert("The button has been clicked!");
+        }
 
     }).
     controller('SettingsController', function ($scope) {

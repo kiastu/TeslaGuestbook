@@ -3,25 +3,33 @@
 /* Controllers */
 
 angular.module('myApp.controllers', []).
-  controller('AppCtrl', function ($scope, $http) {
+    controller('AppCtrl', function ($scope, $http) {
 
-    $http({
-      method: 'GET',
-      url: '/api/name'
+        $http({
+            method: 'GET',
+            url: '/api/name'
+        }).
+            success(function (data, status, headers, config) {
+                $scope.name = data.name;
+            }).
+            error(function (data, status, headers, config) {
+                $scope.name = 'Error!';
+            });
+
     }).
-    success(function (data, status, headers, config) {
-      $scope.name = data.name;
+    controller('GreetController', function ($scope) {
+        // write Ctrl here
+
     }).
-    error(function (data, status, headers, config) {
-      $scope.name = 'Error!';
+    controller('GuestbookController', function ($scope) {
+        // write Ctrl here
+
+    }).
+    controller('SettingsController', function ($scope) {
+        // write Ctrl here
+
+    }).
+    controller('SignController', function ($scope) {
+        // write Ctrl here
+
     });
-
-  }).
-  controller('MyCtrl1', function ($scope) {
-    // write Ctrl here
-
-  }).
-  controller('MyCtrl2', function ($scope) {
-    // write Ctrl here
-
-  });

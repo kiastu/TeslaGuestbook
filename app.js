@@ -44,7 +44,7 @@ if (env === 'production') {
 }
 
 
-/**11
+/**
  * Routes
  */
 

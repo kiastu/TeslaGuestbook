@@ -1,13 +1,12 @@
-xtends layout
+extends layout
 
 block body
   div(ng-controller='AppCtrl')
-    h2 Hello {{name}}
     ul.menu
       li
-        a(href='view1') view1
+        a(href='guestbook') Guestbook
       li
-        a(href='view2') view2
+        a(href='settings') Settings
 
     div(ng-view)
 
